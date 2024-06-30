@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Website name</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="LOGO" id="logo">
+            <h1><a class="a1" href="index.html" onClick="activeHome()" id="home">SITENAME</a></h1>
+        </div>
+        <nav>
+            <a class="a2" href="contact.html" onClick="activeContact()" id="contact">CONTACT</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="welcome ">
+            <h2>WELCOME TO SITE!!</h2>
+            <p>MESSAGE</p>
+        </section>
+        
+        <section id="content">
+            <div class="content-block">
+                <div>
+                    <p>ANY LONG TEXT PARAGRAPH</p>
+                </div>
+                <div>
+                    <img src="image1.jpg" alt="IMAGE">
+                </div>
+            </div>
+            <div class="content-block">
+                <div>
+                    <img src="image2.jpg" alt="IMAGE">
+                </div>
+                <div>
+                    <p>ANY LONG TEXT PARAGRAPH</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="video">
+            <iframe src="https://www.youtube.com/embed/yourvideoid" frameborder="0" allowfullscreen></iframe>
+        </section>
+    </main>
+    
+    <footer>
+        <p>FOOTER TEXT IN SMALL</p>
+        <p>ALL RIGHTS RESERVED</p>
+    </footer>
+    <script type="text/javascript">
+        function activeHome() {
+            document.getElementById("home").classList.add("active");
+            document.getElementById("contact").classList.remove("active");
+        }
+        function activeContact() {
+            document.getElementById("home").classList.remove("active");
+            document.getElementById("contact").classList.add("active");
+        }
+    </script>
+</body>
+</html>

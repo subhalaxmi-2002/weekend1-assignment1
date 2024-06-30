@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Site Logo" id="logo">
+            <h1><a class="a1" href="index.html" onClick="activeHome()" id="home">Sitename</a></h1>
+        </div>
+        <nav>
+            <a class="a2" href="contact.html" onClick="activeContact()" id="contact">Contact</a>
+        </nav>
+    </header>
+    <div class="content-block">
+        
+        <div>
+            <p>SOME TEXT IN PARAGRAPH</p>
+            <input type="text" id="name" name="name"><br>
+        </div>
+    </div>
+    
+    <main>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br>
+
+            <label for="genre">Favourite Genre:</label>
+            <input type="text" id="genre" name="genre" list="genres">
+            <datalist id="genres">
+                <option value="Rock">
+                <option value="Pop">
+                <option value="Jazz">
+                <option value="Classical">
+            </datalist>
+            <br>
+            
+            <label>
+                <input type="checkbox" name="newsletter"> Subscribe to our newsletter via email
+            </label><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    
+    <footer>
+        <p>Footer text in small</p>
+        <p>All rights reserved</p>
+    </footer>
+    <script type="text/javascript">
+        function activeHome() {
+            document.getElementById("home").classList.add("active");
+            document.getElementById("contact").classList.remove("active");
+        }
+        function activeContact() {
+            document.getElementById("home").classList.remove("active");
+            document.getElementById("contact").classList.add("active");
+        }
+    </script>
+</body>
+</html>
